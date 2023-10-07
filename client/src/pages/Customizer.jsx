@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useSnapshot } from 'valtio'
 
@@ -55,7 +55,8 @@ const Customizer = () => {
       // call backend
       setGeneratingImg(true);
 
-      const response = await fetch('http://localhost:8080/api/v1/dalle', {method: 'POST', headers:{
+      const response = await fetch(config.production.backendUrl, {method: 'POST', headers:{
+        //use config.development.backendUrl if you're cloning in you system.
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
