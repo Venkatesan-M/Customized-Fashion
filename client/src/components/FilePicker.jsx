@@ -29,8 +29,8 @@ const FilePicker = ({ file, setFile, readFile }) => {
         {...getRootProps()}
         style={{ width: '160px', height: '140px' }}
       >
-        <input  id="file-upload" type="file" accept="image/*" onChange={(e) => setFile(e.target.files[0])} {...getInputProps()} />
-        <label htmlFor="file-upload" className="filepicker-label">
+        <input  id="file-upload-input" type="file" accept="image/*" onChange={(e) => setFile(e.target.files[0])} {...getInputProps()} />
+        <label htmlFor="file-upload-input" className="filepicker-label">
           {isDragActive ? 'Drop the image here' : 'Click here or drop an image to upload'}
         </label>
         <span className='mt-2 text-gray-800 text-xs flex flex-wrap gap-3 justify-center'>Uploaded file:</span>

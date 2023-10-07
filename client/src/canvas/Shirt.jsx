@@ -13,8 +13,9 @@ const Shirt = () => {
     const fullTexture = useTexture(snap.fullDecal);
 
     useFrame((state, delta)=>{
-        easing.dampC(materials.lambert1.color, snap.color, 0.25, delta)
-
+        var color = snap.color;
+        if(snap.isFullTexture) color = '#262728'      
+        easing.dampC(materials.lambert1.color, color, 0.25, delta)
     })
     const stateString = JSON.stringify(snap)
 
