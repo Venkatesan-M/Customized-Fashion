@@ -5,7 +5,7 @@ const AIPicker = ({prompt, setPrompt, generatingImg,handleSubmit}) => {
   return (
     <div className='aipicker-container'>
       <textarea 
-      placeholder='Ask AI ...'
+      placeholder='Imagine...'
       rows={5}
       value={prompt}
       onChange={(e)=>{setPrompt(e.target.value)}}

@@ -12,12 +12,12 @@ const Home = () => {
     <AnimatePresence>
         {snap.intro && <motion.section className="home" {...slideAnimation('left')}>
             <motion.header {...slideAnimation("down")}>
-                <img src='./threejs.png' alt='logo'className='w-8 h-8 object-contain'></img>
+                <img src={snap.logoDecal} alt='logo'className='w-8 h-8 object-contain'></img>
             </motion.header>
             <motion.div className='home-content' {...headContainerAnimation}>
                 <motion.div {...headTextAnimation}>
                     <h1 className='head-text'>
-                            Let's <br className='xl:block hidden' /> DO IT
+                            How's <br className='xl:block hidden' /> it ?
                     </h1>
                 </motion.div>
                 <motion.div 
@@ -30,7 +30,7 @@ const Home = () => {
                     </p>
                     <CustomButton 
                         type="filled"
-                        title="Suprise Me!"
+                        title="House it!"
                         handleClick={()=> state.intro = false}
                         CustomStyles="w-fit px-4 py-2.5 font-bold text-sm"
                     />
