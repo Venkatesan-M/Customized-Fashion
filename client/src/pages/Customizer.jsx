@@ -4,7 +4,6 @@ import { useSnapshot } from 'valtio'
 
 import config from "../config/config"
 import state from '../store'
-import {download} from '../assets'
 import {downloadCanvasToImage, reader} from '../config/helpers'
 import {EditorTabs, FilterTabs, DecalTypes } from '../config/constants'
 import { fadeAnimation, slideAnimation } from '../config/motion'
@@ -20,7 +19,7 @@ const Customizer = () => {
   const [generatingImg, setGeneratingImg] = useState(false);
 
   const [activeEditorTab,setActiveEditorTab] = useState("");
-  const [activeFilterTab,setActiveFilterTab] = useState({logoShirt: true, stylishShirt: false});
+  const [activeFilterTab,setActiveFilterTab] = useState({logoShirt: true, stylishShirt: false, downloadCanvas: false});
   //show tab content depending on the active tab
 
   const generateTabContent = () =>{
@@ -94,6 +93,17 @@ const Customizer = () => {
       case "stylishShirt":
           state.isFullTexture = !activeFilterTab[tabName];
         break;
+      case "downloadCanvas":
+        state.isDownloading = !activeEditorTab[tabName]
+        downloadCanvasToImage();
+        setTimeout(()=>{    
+          setActiveFilterTab((prevState) => {
+            return {
+              ...prevState,
+              [tabName]: !prevState[tabName]
+            }
+        })},1000);
+
       default:
         state.isLogoTexture = true;
         state.isFullTexture = false;
@@ -171,13 +181,6 @@ const Customizer = () => {
                     handleClick={() => {handleActiveFilterTab(tab.name)}}
                   />
                 ))}
-          <button className='download-btn' onClick={downloadCanvasToImage}>
-          <img
-            src={download}
-            alt='download_image'
-            className='w-3/5 h-3/5 object-contain'
-          />
-        </button>
           </motion.div>
         </>
       )}
