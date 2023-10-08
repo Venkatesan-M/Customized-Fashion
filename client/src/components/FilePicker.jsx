@@ -27,14 +27,12 @@ const FilePicker = ({ file, setFile, readFile }) => {
       <div
         className={`flex-1 flex flex-col ${isDragActiveDropzone ? 'drag-active' : ''}`}
         {...getRootProps()}
-        style={{ width: '160px', height: '140px' }}
       >
-        <input  id="file-upload-input" type="file" accept="image/*" onChange={(e) => setFile(e.target.files[0])} {...getInputProps()} />
         <label htmlFor="file-upload-input" className="filepicker-label">
-          {isDragActive ? 'Drop the image here' : 'Click here or drop an image to upload'}
+          {isDragActive ? 'Drop your image here' : 'Click here or Drop your image here to upload!'}
         </label>
         <span className='mt-2 text-gray-800 text-xs flex flex-wrap gap-3 justify-center'>Uploaded file:</span>
-        <p className="mt-2 text-gray-500 text-xs truncate">
+        <p className="mt-2 text-gray-900 text-xs truncate">
           {file === '' ? 'No Image Selected' : file.name}
         </p>
       </div>
