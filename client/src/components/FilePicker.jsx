@@ -1,39 +1,24 @@
-import React, { useState } from 'react';
-import { useDropzone } from 'react-dropzone';
-
+import React from 'react';
 import CustomButton from './CustomButton';
 
 const FilePicker = ({ file, setFile, readFile }) => {
-  const [isDragActive, setIsDragActive] = useState(false);
-
-  const onDrop = (acceptedFiles) => {
-    setFile(acceptedFiles[0]);
-  };
-
-  const { getRootProps, getInputProps, isDragActive: isDragActiveDropzone } = useDropzone({
-    onDrop,
-    accept: 'image/*',
-    multiple: false,
-    onDragEnter: () => {
-      setIsDragActive(true);
-    },
-    onDragLeave: () => {
-      setIsDragActive(false);
-    },
-  });
-
   return (
     <div className="filepicker-container">
       <div
-        className={`flex-1 flex flex-col ${isDragActiveDropzone ? 'drag-active' : ''}`}
-        {...getRootProps()}
+        className={`flex-1 flex flex-col  `}
       >
-        <label htmlFor="file-upload-input" className="filepicker-label">
-          {isDragActive ? 'Drop your image here' : 'Click here or Drop your image here to upload!'}
+        <input
+          id="file-upload"
+          type="file"
+          accept="image/*"
+          onChange={(e) => setFile(e.target.files[0])}
+        />
+        <label htmlFor="file-upload" className="filepicker-label">
+          Click here to Upload Your Logo or Texture!
         </label>
-        <span className='mt-2 text-gray-800 text-xs flex flex-wrap gap-3 justify-center'>Uploaded file:</span>
-        <p className="mt-2 text-gray-900 text-xs truncate">
-          {file === '' ? 'No Image Selected' : file.name}
+
+        <p className="mt-2 text-gray-500 text-xs truncate">
+          {file === '' ? 'No file selected' : file.name}
         </p>
       </div>
 
