@@ -4,6 +4,10 @@
 
 Welcome to [Customized Fashion](https://customized-fashion.vercel.app/), your destination for a revolutionary fashion experience. Our 3D AI-powered Fashion Store offers a unique and immersive way to design and visualize your fashion ideas. Say goodbye to endless scrolling and hello to personalized fashion.
 
+## Project Demo
+
+[![Watch the video](https://img.youtube.com/vi/MzFhaefWXGE/maxresdefault.jpg)](https://youtu.be/MzFhaefWXGE)
+
 ## Introduction
 
 **How's it? then House it!**
@@ -12,6 +16,12 @@ Welcome to [Customized Fashion](https://customized-fashion.vercel.app/), your de
 Tired of endlessly scrolling through online stores looking for that perfect outfit? Wish you could just design your own clothing and have it come to life? Look no further! Welcome to our 3D Customized Fashion Store.
 
 ![in](https://github.com/Venkatesan-M/Customized-Fashion/assets/127939893/47f838c4-4e2c-43cb-bbbd-e5743fbb5a03)
+
+## Project Demo
+
+Check out our project demo video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MzFhaefWXGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Tech Stack
 
@@ -64,5 +74,3 @@ Prompt the AI to generate cool logos and textures that match your style!
 Download your customized designs and switch between logos and textures from the filter tab provided.
 
 Enjoy your personalized fashion experience with us!
-
-
