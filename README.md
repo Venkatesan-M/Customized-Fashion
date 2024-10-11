@@ -2,7 +2,7 @@
 
 ![Intro](https://github.com/Venkatesan-M/Customized-Fashion/assets/127939893/95799854-98d5-4a4d-a818-08e0c187da63)
 
-Welcome to [Customized Fashion](https://customized-fashion-7z366f965-venkygaming18-gmailcom.vercel.app/), your destination for a revolutionary fashion experience. Our 3D AI-powered Fashion Store offers a unique and immersive way to design and visualize your fashion ideas. Say goodbye to endless scrolling and hello to personalized fashion.
+Welcome to [Customized Fashion](https://customized-fashion.vercel.app/), your destination for a revolutionary fashion experience. Our 3D AI-powered Fashion Store offers a unique and immersive way to design and visualize your fashion ideas. Say goodbye to endless scrolling and hello to personalized fashion.
 
 ## Introduction
 
